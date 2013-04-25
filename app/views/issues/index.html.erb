@@ -1,0 +1,23 @@
+<%= javascript_include_tag "application" %>
+
+<h1>Listing issues</h1>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
+<ul id='issues'>
+<% @issues.each do |issue| %>
+  <li class="issue", id='issue_<%=issue.id%>'>
+    <div class='issue_container'>
+      <%= issue.desc %>
+      <div class='controls'>
+        <%= link_to 'Move Up', increase_issue_path(issue)%>
+        <%= link_to 'Move Down', decrease_issue_path(issue)%>
+        <%= link_to 'Edit', edit_issue_path(issue) %>
+        <%= link_to 'Destroy', issue, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    </div>
+  </li>
+<% end %>
+</ul>
+
+<%= link_to 'New Issue', new_issue_path %>
+<script>window.make_sortable();</script>

@@ -1,0 +1,21 @@
+<h1>Listing issue_lists</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @issue_lists.each do |issue_list| %>
+  <tr>
+    <td><%= link_to 'Show', issue_list %></td>
+    <td><%= link_to 'Edit', edit_issue_list_path(issue_list) %></td>
+    <td><%= link_to 'Destroy', issue_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Issue list', new_issue_list_path %>

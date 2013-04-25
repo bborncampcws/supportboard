@@ -1,0 +1,41 @@
+// Place all the styles related to the issues controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.issue
+{
+  background: rgba(50,231,162,.5);
+	font-size: 16px;
+	min-height: 100px;
+	height:auto !important; 
+	height:100px;
+	margin: 2px;
+	border-radius: 15px;
+	padding-left: 15px;
+	list-style-type: none;
+	position: relative;
+  padding-bottom: 20px;
+	font-family: Times-new-roman;
+}
+
+
+ul
+{
+ padding: 0;
+ margin-left: 0;
+}
+
+.issue_contianer
+{
+	position: relative
+}
+
+.controls
+{
+  position: absolute;
+	bottom: 0px;
+  a {color: grey !important;}
+  font-size: 14px;
+	font-family: Times-new-roman;
+}
+
